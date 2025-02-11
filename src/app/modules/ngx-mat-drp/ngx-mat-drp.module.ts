@@ -35,7 +35,7 @@ import { DATE } from './services/range-store.service';
   providers: [
     {provide: DATE, useValue: new Date()}
   ],
-  entryComponents: [PickerOverlayComponent],
+  // entryComponents: [PickerOverlayComponent],
   exports: [NgxMatDrpComponent]
 })
 export class NgxMatDrpModule { }

@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { RangeStoreService, DATE } from '../services/range-store.service';
@@ -16,7 +16,7 @@ describe('RangeComponent', () => {
   let fixture: ComponentFixture<PickerOverlayComponent>;
   let configStoreService:ConfigStoreService;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ PickerOverlayComponent ],
       imports:[

@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { CalendarOverlayService } from '../services/calendar-overlay.service';
 import { RangeStoreService, DATE } from '../services/range-store.service';
@@ -22,7 +22,7 @@ describe('NgxMatDrpComponent', () => {
   const fromDate: Date = new Date(today.setDate(today.getDate() - 7));
   const toDate: Date = new Date();
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [NgxMatDrpComponent],
       providers: [

@@ -1,10 +1,10 @@
-import { TestBed, async } from '@angular/core/testing';
+import { TestBed, waitForAsync  } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { NgxMatDrpModule } from '../../public_api';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 describe('AppComponent', () => {
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent
@@ -13,12 +13,12 @@ describe('AppComponent', () => {
     }).compileComponents();
   }));
 
-  it('should create the app', async(() => {
+  it('should create the app', waitForAsync(() => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   }));
-  it('should setup presets', async(() => {
+  it('should setup presets', waitForAsync(() => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     spyOn(app, 'setupPresets');
@@ -26,7 +26,7 @@ describe('AppComponent', () => {
     expect(app.setupPresets).toHaveBeenCalled();
     expect(app.presets).toBeDefined();
   }));
-  it('should setup date-range-picker options with required props', async(() => {
+  it('should setup date-range-picker options with required props', waitForAsync(() => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     fixture.detectChanges();
