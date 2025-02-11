@@ -27,7 +27,6 @@
     "packagr": "rimraf dist && ng-packagr -p ng-package.json",
     "gh-build": "ng build --prod --output-path docs --base-href"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^18.0.0",
     "@angular/cdk": "^18.0.0",
