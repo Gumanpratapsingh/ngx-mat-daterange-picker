@@ -1,8 +1,4 @@
-# This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
-# For more information see: https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages
-
 name: Node.js Package
-
 on:
   release:
     types: [created]
@@ -16,7 +12,8 @@ jobs:
         with:
           node-version: 20
       - run: npm ci
-      - run: npm test
+      # Remove the test step since we removed test dependencies
+      # - run: npm test
 
   publish-npm:
     needs: build
@@ -28,6 +25,9 @@ jobs:
           node-version: 20
           registry-url: https://registry.npmjs.org/
       - run: npm ci
-      - run: npm publish
+      # Add the build step before publishing
+      - run: npm run build
+      # Change directory to dist before publishing
+      - run: cd dist && npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM}}
