@@ -1,10 +1,10 @@
 {
-  "name": "ngx-mat-daterange-picker",
+  "name": "@gps/ngx-mat-daterange-picker",
   "version": "18.0.5",
-  "homepage": "",
+  "homepage": "https://github.com/Gumanpratapsingh/ngx-mat-daterange-picker",
   "repository": {
-    "type": "git",
-    "url": ""
+    "type": "git forked from ngx-mat-daterange-picker",
+    "url": "https://github.com/Gumanpratapsingh/ngx-mat-daterange-picker"
   },
   "license": "MIT",
   "keywords": [
