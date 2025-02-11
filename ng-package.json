@@ -5,6 +5,16 @@
     "entryFile": "public_api.ts"
   },
   "allowedNonPeerDependencies": [
-    "rxjs"
+    "rxjs",
+    "@angular/animations",
+    "@angular/cdk",
+    "@angular/common",
+    "@angular/core",
+    "@angular/forms",
+    "@angular/material",
+    "@angular/platform-browser",
+    "@angular/platform-browser-dynamic",
+    "core-js",
+    "zone.js"
   ]
 }
