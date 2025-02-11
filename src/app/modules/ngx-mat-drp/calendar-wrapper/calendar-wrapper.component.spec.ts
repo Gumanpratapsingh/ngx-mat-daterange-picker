@@ -21,7 +21,7 @@ describe('CalendarWrapperComponent', () => {
   beforeEach(() => {
     configStoreService = TestBed.get(ConfigStoreService);
     configStoreService.ngxDrpOptions = {
-      presets:this.presets,
+      presets:[],
       format: 'mediumDate',
       range: {fromDate:new Date(), toDate:new Date()},
       applyLabel: "Submit"
